@@ -2,6 +2,7 @@ import SystemMap from "@/components/SystemMap";
 import InternalFlow from "@/components/InternalFlow";
 import PartnerFlow from "@/components/PartnerFlow";
 import ClientFlow from "@/components/ClientFlow";
+import BuildingIntelligence from "@/components/BuildingIntelligence";
 
 export const metadata = {
   title: "Notes",
@@ -185,10 +186,9 @@ export default function NotesPage() {
   <ClientFlow />
 </div>
 
-{/* Building intelligence demo placeholder */}
-<div className="mb-8 p-12 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900 text-center">
-  <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">Interactive building intelligence demo</p>
-  <p className="text-xs text-zinc-400 dark:text-zinc-500">Coming next: type an address, see real intelligence</p>
+{/* Building intelligence demo */}
+<div className="mb-8">
+  <BuildingIntelligence />
 </div>
 
   {/* Publication preview */}
