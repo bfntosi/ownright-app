@@ -1,6 +1,7 @@
 import SystemMap from "@/components/SystemMap";
 import InternalFlow from "@/components/InternalFlow";
 import PartnerFlow from "@/components/PartnerFlow";
+import ClientFlow from "@/components/ClientFlow";
 
 export const metadata = {
   title: "Notes",
@@ -179,11 +180,16 @@ export default function NotesPage() {
     Most clients meet a lawyer when the deal is firm. That timing has always been about retainers and liability, not about when the client actually needs the information. By the time the lawyer is in the picture, the offer is written, the deposit is on the table, and the room for adjustment is narrow. A different version of this puts the data in the client&apos;s hands earlier. They type the address they are about to make an offer on. The system pulls everything Ownright knows about that building, every past closing pattern, every status certificate fact in the database, every relevant CanLII case involving the property or the condo corporation. The output is plain language. Average closing complications for this building. Reserve fund history. Recent litigation. Things to ask about before writing the offer. None of this is legal advice. It is what every buyer should be able to see before signing anything. The platform also keeps buyers and sellers informed between transactions, with weekly publications drawn from the same data. Building of the week. Closing pulse. Neighborhood patterns. The point is not to give people more news. The point is to give them informed enough to act, in the words of the Operators Report. The retainer conversation happens later, on the deal that comes from a client who already trusts Ownright because the platform helped them before they paid for anything.
   </p>
 
-  {/* Building intelligence demo placeholder */}
-  <div className="mb-8 p-12 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900 text-center">
-    <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">Interactive building intelligence demo</p>
-    <p className="text-xs text-zinc-400 dark:text-zinc-500">Coming next: type an address, see real intelligence</p>
-  </div>
+  {/* Client flow */}
+<div className="mb-8">
+  <ClientFlow />
+</div>
+
+{/* Building intelligence demo placeholder */}
+<div className="mb-8 p-12 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900 text-center">
+  <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">Interactive building intelligence demo</p>
+  <p className="text-xs text-zinc-400 dark:text-zinc-500">Coming next: type an address, see real intelligence</p>
+</div>
 
   {/* Publication preview */}
   <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden">
