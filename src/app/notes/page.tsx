@@ -1,3 +1,5 @@
+import SystemMap from "@/components/SystemMap";
+
 export const metadata = {
   title: "Notes",
   robots: {
@@ -30,10 +32,13 @@ export default function NotesPage() {
           Two days ago Ownright published the Operators Report 2026. The headline finding was that Canadian buyers are not paralyzed by affordability anymore. They are paralyzed by uncertainty. The report closes with a line worth pulling out. The Canadians who move this year will not be the ones who feel most confident, they will be the ones who feel informed enough to act anyway. This page is about how the data Ownright is already collecting can become that information layer. Every closing flowing through the Partner API is producing patterns that, taken together, are worth more than any single transaction. Right now most of that data is doing operational work, moving closings forward. There is a version where it does strategic work too, becoming the information that helps buyers act, partners advise better, and Ownright operate smarter. This page is what that version could look like.
         </p>
 
-        {/* System map placeholder */}
-        <div className="mb-24 p-12 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900 text-center">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">System map goes here</p>
-        </div>
+        {/* System map */}
+<div className="mb-4">
+  <SystemMap />
+</div>
+<p className="text-sm text-center text-zinc-500 dark:text-zinc-400 mb-24 italic">
+  Every transaction has the same center: the client.
+</p>
 
         {/* Section 2: Inside the team */}
 <section className="mb-24">
