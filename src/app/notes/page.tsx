@@ -1,5 +1,6 @@
 import SystemMap from "@/components/SystemMap";
 import InternalFlow from "@/components/InternalFlow";
+import PartnerFlow from "@/components/PartnerFlow";
 
 export const metadata = {
   title: "Notes",
@@ -111,10 +112,10 @@ export default function NotesPage() {
     Partners are how most clients find Ownright. Brokers, agents, and mortgage brokers refer the deal, and the closing follows. That channel works. The data from every referral is sitting there, telling a story about each partner&apos;s pipeline that the partner cannot see themselves. Their deals run into the same document gaps repeatedly. Their files concentrate in certain deal types. Their clients tend to hit specific friction at specific stages. Some partners send mostly clean deals. Others send a high volume of properties with complicated titles, divorce involvement, or estate transfers. None of this is judgment, it is pattern. The same data that helps Ownright&apos;s team triage internally can give partners a real view of their own book. A brokerage owner sees where their team is strong and where their pipeline carries risk. A mortgage broker sees which lenders are creating the most last-minute scrambles. The intelligence flows back to the people doing the referrals, and the next round of clients gets better service because the partner is sharper.
   </p>
 
-  {/* Flow diagram placeholder */}
-  <div className="mb-8 p-8 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900 text-center">
-    <p className="text-sm text-zinc-500 dark:text-zinc-400">Flow diagram for partner layer goes here</p>
-  </div>
+ {/* Partner flow */}
+<div className="mb-8">
+  <PartnerFlow />
+</div>
 
   {/* Brokerage pattern mockup card */}
   <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden">
