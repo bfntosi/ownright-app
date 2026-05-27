@@ -17,13 +17,13 @@ export default function SystemMap() {
         position: { x: 250, y: 0 },
         data: { label: "Internal team" },
         style: {
-          background: "white",
-          border: "1px solid rgb(228, 228, 231)",
+          background: "var(--background-card)",
+          border: "1px solid var(--border)",
           borderRadius: "8px",
           padding: "12px 20px",
           fontSize: "14px",
           fontWeight: 500,
-          color: "rgb(24, 24, 27)",
+          color: "var(--foreground)",
           width: 140,
           textAlign: "center" as const,
         },
@@ -35,13 +35,13 @@ export default function SystemMap() {
         position: { x: 0, y: 150 },
         data: { label: "Partners" },
         style: {
-          background: "white",
-          border: "1px solid rgb(228, 228, 231)",
+          background: "var(--background-card)",
+          border: "1px solid var(--border)",
           borderRadius: "8px",
           padding: "12px 20px",
           fontSize: "14px",
           fontWeight: 500,
-          color: "rgb(24, 24, 27)",
+          color: "var(--foreground)",
           width: 120,
           textAlign: "center" as const,
         },
@@ -53,8 +53,8 @@ export default function SystemMap() {
         position: { x: 220, y: 130 },
         data: { label: "The Client" },
         style: {
-          background: "rgb(24, 24, 27)",
-          border: "1px solid rgb(24, 24, 27)",
+          background: "var(--foreground)",
+          border: "1px solid var(--foreground)",
           borderRadius: "12px",
           padding: "20px 28px",
           fontSize: "16px",
@@ -71,13 +71,13 @@ export default function SystemMap() {
         position: { x: 500, y: 150 },
         data: { label: "Data" },
         style: {
-          background: "white",
-          border: "1px solid rgb(228, 228, 231)",
+          background: "var(--background-card)",
+          border: "1px solid var(--border)",
           borderRadius: "8px",
           padding: "12px 20px",
           fontSize: "14px",
           fontWeight: 500,
-          color: "rgb(24, 24, 27)",
+          color: "var(--foreground)",
           width: 120,
           textAlign: "center" as const,
         },
@@ -96,10 +96,10 @@ export default function SystemMap() {
         target: "client",
         type: "straight",
         animated: true,
-        style: { stroke: "rgb(161, 161, 170)", strokeWidth: 2 },
+        style: { stroke: "var(--accent)", strokeWidth: 2 },
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: "rgb(161, 161, 170)",
+          color: "var(--accent)",
         },
       },
       {
@@ -108,10 +108,10 @@ export default function SystemMap() {
         target: "client",
         type: "straight",
         animated: true,
-        style: { stroke: "rgb(161, 161, 170)", strokeWidth: 2 },
+        style: { stroke: "var(--accent)", strokeWidth: 2 },
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: "rgb(161, 161, 170)",
+          color: "var(--accent)",
         },
       },
       {
@@ -120,10 +120,10 @@ export default function SystemMap() {
         target: "client",
         type: "straight",
         animated: true,
-        style: { stroke: "rgb(161, 161, 170)", strokeWidth: 2 },
+        style: { stroke: "var(--accent)", strokeWidth: 2 },
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: "rgb(161, 161, 170)",
+          color: "var(--accent)",
         },
       },
     ],
@@ -131,7 +131,7 @@ export default function SystemMap() {
   );
 
   return (
-    <div className="w-full h-[400px] rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+    <div className="w-full h-[400px] rounded-lg border border-[var(--border)]" style={{ background: "var(--background-card)" }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -145,7 +145,7 @@ export default function SystemMap() {
         zoomOnDoubleClick={false}
         proOptions={{ hideAttribution: true }}
       >
-        <Background color="rgb(244, 244, 245)" gap={20} />
+        <Background color="var(--background-subtle)" gap={20} />
       </ReactFlow>
     </div>
   );

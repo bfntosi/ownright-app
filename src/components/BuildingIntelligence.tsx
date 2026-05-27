@@ -129,26 +129,26 @@ export default function BuildingIntelligence() {
   };
 
   return (
-    <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden">
+    <div className="rounded-lg border border-[var(--border)] bg-[var(--background-card)] overflow-hidden">
       {/* Search input area */}
-      <div className="p-6 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950">
-        <p className="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">
+      <div className="p-6 border-b border-[var(--border)] bg-[var(--background-subtle)]">
+        <p className="text-xs uppercase tracking-wider text-[var(--foreground-subtle)] mb-3">
           Try a building
         </p>
         <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Type a Toronto building or address"
-          className="w-full px-4 py-3 mb-3 rounded-md border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600"
-          readOnly
-        />
+  type="text"
+  value={query}
+  onChange={(e) => setQuery(e.target.value)}
+  placeholder="Type a Toronto building or address"
+  className="w-full px-4 py-3 mb-3 rounded-md border border-[var(--border)] bg-[var(--background-card)] text-[var(--foreground)] placeholder:text-[var(--foreground-subtle)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+  readOnly
+/>
         <div className="flex flex-wrap gap-2">
           {SUGGESTIONS.map((s) => (
             <button
               key={s.key}
               onClick={() => handleSearch(s.key)}
-              className="text-xs px-3 py-1.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors"
+              className="text-xs px-3 py-1.5 rounded-full bg-[var(--background-card)] border border-[var(--border)] text-[var(--foreground-muted)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
             >
               {s.label}
             </button>
@@ -159,8 +159,8 @@ export default function BuildingIntelligence() {
       {/* Loading state */}
       {loading && (
         <div className="p-12 text-center">
-          <div className="inline-block w-6 h-6 border-2 border-zinc-300 dark:border-zinc-700 border-t-zinc-900 dark:border-t-zinc-50 rounded-full animate-spin mb-3" />
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+            <div className="inline-block w-6 h-6 border-2 border-[var(--border)] border-t-[var(--accent)] rounded-full animate-spin mb-3" />
+            <p className="text-sm text-[var(--foreground-subtle)]">
             Pulling intelligence on {query}
           </p>
         </div>
@@ -169,7 +169,7 @@ export default function BuildingIntelligence() {
       {/* Empty state */}
       {!loading && !result && (
         <div className="p-12 text-center">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-[var(--foreground-subtle)]">
             Click a suggestion above to see what the intelligence layer surfaces.
           </p>
         </div>
@@ -177,75 +177,75 @@ export default function BuildingIntelligence() {
 
       {/* Results */}
       {!loading && result && (
-        <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
+        <div className="divide-y divide-[var(--border)]">
           {/* Building snapshot */}
           <div className="p-6">
-            <p className="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2">
+            <p className="text-xs uppercase tracking-wider text-[var(--foreground-subtle)] mb-2">
               Building
             </p>
-            <p className="text-base font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+            <p className="text-base font-semibold text-[var(--foreground)] mb-1">
               {result.name}
             </p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-[var(--foreground-muted)]">
               {result.address} · Built {result.yearBuilt} · {result.units} units
             </p>
           </div>
 
           {/* Closing patterns */}
           <div className="p-6">
-            <p className="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">
+            <p className="text-xs uppercase tracking-wider text-[var(--foreground-subtle)] mb-3">
               Closing patterns
             </p>
             <div className="grid grid-cols-2 gap-4 mb-3">
               <div>
-                <p className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+                <p className="text-2xl font-semibold text-[var(--foreground)]">
                   {result.closingPatterns.avgDays}
                 </p>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+                <p className="text-xs text-[var(--foreground-subtle)] mt-1">
                   Average days to close
                 </p>
               </div>
               <div>
-                <p className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+                <p className="text-2xl font-semibold text-[var(--foreground)]">
                   {result.closingPatterns.closingsOnFile}
                 </p>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+                <p className="text-xs text-[var(--foreground-subtle)] mt-1">
                   Past closings on file
                 </p>
               </div>
             </div>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-[var(--foreground-muted)]">
               {result.closingPatterns.commonComplications}
             </p>
           </div>
 
           {/* Status certificate */}
           <div className="p-6">
-            <p className="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">
+            <p className="text-xs uppercase tracking-wider text-[var(--foreground-subtle)] mb-3">
               Status certificate intelligence
             </p>
             <div className="space-y-2">
               <div>
-                <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Reserve fund</p>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">{result.statusCert.reserveFund}</p>
+                <p className="text-sm font-medium text-[var(--foreground)]">Reserve fund</p>
+                <p className="text-sm text-[var(--foreground-muted)]">{result.statusCert.reserveFund}</p>
               </div>
               <div>
-                <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Recent assessments</p>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">{result.statusCert.recentAssessments}</p>
+                <p className="text-sm font-medium text-[var(--foreground)]">Recent assessments</p>
+                <p className="text-sm text-[var(--foreground-muted)]">{result.statusCert.recentAssessments}</p>
               </div>
               <div>
-                <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Board activity</p>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">{result.statusCert.boardActivity}</p>
+                <p className="text-sm font-medium text-[var(--foreground)]">Board activity</p>
+                <p className="text-sm text-[var(--foreground-muted)]">{result.statusCert.boardActivity}</p>
               </div>
             </div>
           </div>
 
           {/* CanLII */}
           <div className="p-6">
-            <p className="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">
+            <p className="text-xs uppercase tracking-wider text-[var(--foreground-subtle)] mb-3">
               Legal activity (CanLII)
             </p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-[var(--foreground-muted)]">
               {result.canlii.cases > 0
                 ? `${result.canlii.cases} relevant case${result.canlii.cases > 1 ? "s" : ""} found. ${result.canlii.summary}`
                 : result.canlii.summary}
@@ -254,13 +254,13 @@ export default function BuildingIntelligence() {
 
           {/* Things to ask */}
           <div className="p-6">
-            <p className="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">
+            <p className="text-xs uppercase tracking-wider text-[var(--foreground-subtle)] mb-3">
               Things to ask about before writing the offer
             </p>
             <ul className="space-y-2">
               {result.thingsToAsk.map((item, i) => (
-                <li key={i} className="text-sm text-zinc-700 dark:text-zinc-300 flex items-start gap-2">
-                  <span className="text-zinc-400 dark:text-zinc-500 mt-0.5">·</span>
+                <li key={i} className="text-sm text-[var(--foreground)] flex items-start gap-2">
+                  <span className="text-[var(--foreground-subtle)] mt-0.5">·</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -268,8 +268,8 @@ export default function BuildingIntelligence() {
           </div>
 
           {/* Disclaimer */}
-          <div className="p-6 bg-zinc-50 dark:bg-zinc-950">
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 italic">
+          <div className="p-6 bg-[var(--background-subtle)]">
+            <p className="text-xs text-[var(--foreground-subtle)] italic">
               Demo data for illustration. The production version would pull from Ownright&apos;s internal database, CanLII, and public records in real time. This is not legal advice.
             </p>
           </div>

@@ -40,17 +40,17 @@ export default function PartnerFlow() {
         {steps.map((step) => (
           <div
             key={step.number}
-            className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+            className="rounded-lg border border-[var(--border)] bg-[var(--background-card)] p-5 hover:border-[var(--accent)] transition-colors"
           >
             <div className="flex items-start gap-3 mb-3">
-              <span className="text-xs font-mono text-zinc-400 dark:text-zinc-500">
+              <span className="text-xs font-mono text-[var(--foreground-subtle)]">
                 {step.number}
               </span>
-              <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
+              <h3 className="text-sm font-semibold text-[var(--foreground)]">
                 {step.title}
               </h3>
             </div>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-sm text-[var(--foreground-muted)] leading-relaxed">
               {step.description}
             </p>
           </div>
