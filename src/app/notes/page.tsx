@@ -4,6 +4,7 @@ import PartnerFlow from "@/components/PartnerFlow";
 import PartnerChart from "@/components/PartnerChart";
 import ClientFlow from "@/components/ClientFlow";
 import BuildingIntelligence from "@/components/BuildingIntelligence";
+import MarginNote from "@/components/MarginNote";
 
 export const metadata = {
   title: "Notes",
@@ -60,6 +61,10 @@ export default function NotesPage() {
   <InternalFlow />
 </div>
 
+<MarginNote>
+  The Operators Report says financing failure causes 34% of collapsed deals, and 38% of professionals say it is getting worse than two years ago. Predictive risk scoring at file intake flags financing fragility before deals collapse. That is the kind of operational improvement the report calls for without naming.
+</MarginNote>
+
   {/* Triage mockup card */}
   <div className="rounded-lg border border-[var(--border)] bg-[var(--background-card)] overflow-hidden">
     <div className="px-6 py-4 border-b border-[var(--border)] bg-[var(--background-subtle)]">
@@ -102,6 +107,9 @@ export default function NotesPage() {
 
     </div>
   </div>
+  <MarginNote>
+    The status certificate database is the asset that compounds. Year one is one-time scans. Year three is the most granular condo building health dataset in Ontario. No traditional firm can build this.
+  </MarginNote>
 
 </section>
 
@@ -119,6 +127,10 @@ export default function NotesPage() {
 <div className="mb-8">
   <PartnerChart />
 </div>
+
+<MarginNote>
+  The Operators Report identifies client indecision as the top cause of delays at 38%. The partner intelligence layer is where this gets addressed. Brokers who can see their own pipeline patterns can spot the deals where indecision is likely, intervene earlier, and reduce the cascade of consequences when a buyer hesitates.
+</MarginNote>
 
   {/* Brokerage pattern mockup card */}
   <div className="rounded-lg border border-[var(--border)] bg-[var(--background-card)] overflow-hidden">
@@ -192,6 +204,10 @@ export default function NotesPage() {
   <BuildingIntelligence />
 </div>
 
+<MarginNote>
+  This is where the Operators Report&apos;s central question gets answered. Buyers are not less capable of buying. They are less informed than they need to be to act with confidence. The platform layer, combined with weekly publication of patterns Ownright is seeing in real transactions, becomes the information source that lets buyers cross the threshold from hesitation to action.
+</MarginNote>
+
   {/* Publication preview */}
   <div className="rounded-lg border border-[var(--border)] bg-[var(--background-card)] overflow-hidden">
     <div className="px-6 py-4 border-b border-[var(--border)] bg-[var(--background-subtle)]">
@@ -228,6 +244,10 @@ export default function NotesPage() {
   <p className="text-base md:text-lg leading-relaxed text-[var(--foreground)] mb-8">
     This is one page. The full version is many conversations, many tradeoffs, many decisions about sequencing and risk. The internal data layer is the foundation. The partner intelligence builds on it. The client-facing platform is the brand and reach play that depends on both. None of it is plug-and-play. The data needs structure, the regulatory framing matters, and the partner conversations need someone willing to actually have them, not just analyze them on a slide. The dashboard was the first test, to see if the closing layer could be made visible to the people moving the deal. It worked. This page is the second test, to see if the layer underneath could be made visible too. What happens after is up to you. I would love to talk through any of it.
   </p>
+
+<MarginNote>
+  The Operators Report is a diagnosis. The data layer described on this page is the response. Joel published the question on May 26. This page is what the answer could look like from a builder&apos;s perspective.
+</MarginNote>
 
   {/* Footer */}
   <div className="pt-12 border-t border-[var(--border)]">
