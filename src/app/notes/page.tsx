@@ -1,4 +1,5 @@
 import SystemMap from "@/components/SystemMap";
+import InternalFlow from "@/components/InternalFlow";
 
 export const metadata = {
   title: "Notes",
@@ -50,10 +51,10 @@ export default function NotesPage() {
     Every new closing that lands at Ownright today gets the same starting point. The team reads the file, makes a judgment on complexity, and routes it through the process. That works at current scale. It does not work at ten times the scale. The same data that powers the dashboard can score new files the moment they arrive. A risk engine reads historical patterns. A CanLII check runs in parallel to flag any litigation involving the property, building, or parties. For condo deals, an AI scan reads the status certificate for known red flags like upcoming special assessments, low reserve funds, or board disputes. Every certificate the team reviews also feeds the database, extracting structured facts that build a longitudinal record of each building&apos;s health over time. After enough closings, the database knows which buildings have been declining, which have stable reserves, which have boards in flux. The team sees all of this in the triage view before anyone touches the file manually. Files that look clean run on automation. Files that look complicated get the attention they need. The client gets better service either way because the team&apos;s attention is going where it actually matters.
   </p>
 
-  {/* Flow diagram placeholder */}
-  <div className="mb-8 p-8 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900 text-center">
-    <p className="text-sm text-zinc-500 dark:text-zinc-400">Flow diagram for internal layer goes here</p>
-  </div>
+  {/* Internal flow */}
+<div className="mb-8">
+  <InternalFlow />
+</div>
 
   {/* Triage mockup card */}
   <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden">
