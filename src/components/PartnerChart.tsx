@@ -142,7 +142,7 @@ export default function PartnerChart() {
             <Bar
               dataKey="value"
               radius={[0, 4, 4, 0]}
-              onClick={(d) => setSelected(d.name)}
+              onClick={(d) => setSelected(d.name ?? null)}
               style={{ cursor: "pointer" }}
             >
               {data.map((entry) => (
