@@ -157,7 +157,7 @@ export default function NotesPage() {
                                         <p className="text-xs text-[var(--foreground-subtle)] mt-1">On-time close rate</p>
                                     </div>
                                     <div>
-                                        <p className="text-2xl font-semibold text-red-600 dark:text-red-400">3</p>
+                                        <p className="text-2xl font-semibold text-[var(--danger)]">3</p>
                                         <p className="text-xs text-[var(--foreground-subtle)] mt-1">Files at risk</p>
                                     </div>
                                 </div>
@@ -252,6 +252,9 @@ export default function NotesPage() {
 
                 {/* Section 5: Closing */}
                 <section className="mb-24">
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[var(--foreground)] mb-6">
+                        What happens next
+                    </h2>
                     <p className="text-base md:text-lg leading-relaxed text-[var(--foreground)] mb-8">
                         This is one page. The full version is many conversations, many tradeoffs, many decisions about sequencing and risk. The internal data layer is the foundation. The partner intelligence builds on it. The client-facing platform is the brand and reach play that depends on both. None of it is plug-and-play. The data needs structure, the regulatory framing matters, and the partner conversations need someone willing to actually have them, not just analyze them on a slide. The dashboard was the first test, to see if the closing layer could be made visible to the people moving the deal. It worked. This page is the second test, to see if the layer underneath could be made visible too. What happens after is up to you. I would love to talk through any of it.
                     </p>
